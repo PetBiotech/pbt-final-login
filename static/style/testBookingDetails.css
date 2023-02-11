@@ -1,0 +1,31 @@
+.cartBody .userDetails {
+    background-color: rgb(255, 255, 255);
+    width: 50%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px 20px;
+    border-radius: 15px;
+    margin-left: 15px;
+    overflow-x: hidden;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.cartBody .userDetails .addressForm{
+    padding: 10px 20px;
+}
+.cartBody .userDetails .addressForm div{
+    margin-bottom: 10px;
+}
+.cartBody .userDetails .addressForm div label{
+    margin-bottom: -2px;
+}
+.cartBody .userDetails .addressForm select{
+    width:100%;
+}
+@media screen and (max-width:1000px){
+    .cartBody .userDetails {
+        width: 100%;
+        /* height: 100%; */
+    }
+}

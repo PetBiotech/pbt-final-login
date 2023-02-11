@@ -1,0 +1,10 @@
+{% extends 'admin/master.html' %}
+{% block body %}
+{{ super() }}
+{% if current_user.is_authenticated %}
+  <h2>Welcome back, {{ current_user.username }}!</h2>
+{% else %}
+  <h2>Please Login first in order to access the views.</h2>
+  <h2>Click here to <a href="{{ '/login' }}">login</a>.</h2>
+{% endif %}
+{% endblock %}

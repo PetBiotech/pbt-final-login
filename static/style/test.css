@@ -1,0 +1,679 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.testForm input[type="checkbox"] {
+    display: none;
+}
+
+.testBody {
+    width: 100%;
+    min-height: 50vw;
+    max-height: fit-content;
+    /* height: fit-content; */
+    /* background-color: rgb(239, 239, 239); */
+    padding: 10px 100px 0 100px;
+    /* height: calc(100vh-100px); */
+    overflow-x: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-image: url('/static/image/allAnimals.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+.testBody .body1 {
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.testBody .title {
+    letter-spacing: 2px;
+    word-spacing: 8px;
+    word-break: break-all;
+    color: rgb(28, 60, 152);
+    font-size: 30px;
+    font-weight: bold;
+    cursor: context-menu;
+}
+
+.testBody .underline {
+    width: 150px;
+    height: 5px;
+    background-color: rgb(0, 119, 204);
+    margin-top: -10px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.testBody .tests {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* background-color: red; */
+    flex-direction: column;
+}
+
+.testBody .tests .testHeader {
+    width: 80%;
+    height: fit-content;
+    padding: 10px 0px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    /* box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.125); */
+    border-radius: 10px;
+    cursor: pointer;
+    flex-wrap: wrap;
+}
+
+.testBody .tests .testHeader div {
+    padding: 10px 50px;
+    margin: 20px;
+    border-radius: 10px;
+    transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    background: linear-gradient(51deg, #5454ff3a, #12aae151, #2f5cff3c);
+    background-size: 180% 180%;
+    /* background: radial-gradient(circle, rgba(238, 174, 202, 0.25) 0%, rgba(148, 187, 233, 0.25) 100%); */
+}
+
+.testBody .tests .testHeader div:hover {
+    /* background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%); */
+    background: linear-gradient(51deg, #5455ff, #12abe1, #2f5cff);
+    background-size: 180% 180%;
+}
+
+.testBody .tests .testHeader div button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-weight: bolder;
+    letter-spacing: 1px;
+}
+
+/* modals css */
+.modal-dialog,
+.modal-content {
+    /* margin:auto; */
+    width: 95vw;
+    height: 100vh;
+    padding: 0;
+}
+
+.modal-header {
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    color: #1c3c98;
+    background-color: rgb(241, 241, 241);
+    padding: 0 20px;
+}
+
+.modal-header img {
+    /* width:125px; */
+    height: 100%;
+}
+
+.modal-header h3 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+}
+
+.modal-header p {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.modal-header p:last-child {
+    font-size: 1rem;
+    margin-top: -20px;
+}
+
+.modal-body {
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+.modal-body .testForm {
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /*  */
+    justify-content: center;
+    /* align-items: center; */
+    /*  */
+    flex-wrap: wrap;
+    overflow-x: auto;
+    padding: 10px;
+}
+
+.modal-body .testForm label {
+    min-width: 320px;
+    max-width: 320px;
+    /* height: 100%;
+    height: fit-content; */
+    height: 500px;
+    overflow-y: auto;
+    padding: 10px 15px;
+    /* word-break: break-all; */
+    margin: 25px 15px;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+        rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    cursor: pointer;
+    border: 4px dashed rgba(0, 0, 0, 0);
+    box-shadow: rgba(67, 71, 85, 0.47) 0px 0px 0.25em,
+        rgba(90, 125, 188, 0.25) 0px 0.25em 1em;
+}
+
+.modal-body .testForm .smallCheckBox {
+    width: 320px;
+    height: fit-content;
+}
+
+.modal-body .testForm label h6 {
+    font-size: 20px;
+    color: #1c3c98;
+    width: 100%;
+    border-bottom: 2px solid #1c3c98;
+}
+
+.modal-body .testForm label ol {
+    list-style-position: inside;
+    font-size: 17px;
+    color: #444444;
+}
+
+.modal-body .testForm label p {
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid rgb(186, 186, 186);
+    border-radius: 10px;
+    /* color:rgb(0, 174, 0); */
+}
+
+.viewMoreButton {
+    display: none;
+}
+
+.modal-footer {
+    background-color: #e8e8e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartIcon {
+    position: fixed;
+    right: 30px;
+    bottom: 25px;
+    background-color: rgb(42, 113, 255);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 15px 17px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 8;
+    animation: all ease-in-out 0.5s forwards;
+    -o-animation: all ease-in-out 0.5s forwards;
+    -webkit-animation: all ease-in-out 0.5s forwards;
+    -moz-animation: all ease-in-out 0.5s forwards;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+}
+
+.cartIcon {
+    bottom: 15px;
+    margin-bottom: 10px;
+}
+
+/* cart Design */
+.cartHeader {
+    background-color: white;
+    justify-content: space-between;
+    box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.25);
+}
+
+.cartHeader h3 {
+    color: rgb(61, 61, 61);
+}
+
+.cartFooter {
+    box-shadow: 0 -2px 10px 0px rgba(0, 0, 0, 0.25);
+    background-color: white;
+}
+
+.cartBody {
+    justify-content: space-between;
+    padding-bottom: 20px;
+    background-color: #f6f6f6;
+}
+
+.cartBody .cartItems {
+    /* background-color: rgb(255, 255, 255); */
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 60%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px 20px;
+    /* border-radius: 15px; */
+    margin-right: 10px;
+    /* box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px; */
+}
+
+.cartBody .cartItems .cartItem {
+    background-color: white;
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border: 2px solid rgba(0, 0, 0, 0.734);
+    margin-bottom: 15px;
+}
+
+.cartBody .cartItems .cartItem .numberofTests p {
+    /* background-color: red; */
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.cartBody .cartItems .cartItem .upperDetails,
+.cartBody .cartItems .cartItem .lowerDetails {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    font-size: 18px;
+    /* font-weight: bold; */
+    color: #454545;
+}
+
+.cartBody .cartItems .cartItem p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.cartBody .cartItems .cartItem .upperDetails p:first-child,
+.cartBody .cartItems .cartItem .lowerDetails p:first-child {
+    /* background-color: red; */
+    width: 75%;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.cartBody .cartItems .cartItem .lowerDetails p:first-child {
+    width: 100%;
+}
+
+.cartBody .cartItems .cartItem span {
+    font-weight: bolder;
+    font-size: 20px;
+    color: #001950;
+    margin-right: 10px;
+}
+
+@media screen and (max-width:1200px) {
+    .cartBody .cartItems {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .cartBody {
+        flex-direction: column-reverse;
+        padding-bottom: 0;
+        overflow-x: hidden;
+    }
+
+    .cartBody .cartItems {
+        width: 100%;
+        margin: 20px 0 0px 0;
+        padding-bottom: 50px;
+    }
+
+    .cartBody .userDetails {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .cartBody {
+        flex-direction: column-reverse;
+        padding-bottom: 0;
+        overflow-x: hidden;
+    }
+
+    .cartBody .cartItems {
+        width: 100%;
+        margin: 20px 0 0px 0;
+        padding-bottom: 50px;
+    }
+
+    .cartBody .userDetails {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .cartBody .cartItems .cartItem .upperDetails,
+    .cartBody .cartItems .cartItem .lowerDetails {
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 16px;
+    }
+
+    .cartBody .cartItems .cartItem .upperDetails p:first-child,
+    .cartBody .cartItems .cartItem .lowerDetails p:first-child {
+        /* background-color: red; */
+        width: 100%;
+        justify-content: flex-end;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .testBody {
+        height: 70vw;
+        padding: 50px 25px 50px 25px;
+    }
+
+    .testBody .title {
+        font-size: 1rempx;
+    }
+
+    /* 
+    
+    
+    */
+    /* modal edit */
+    /* 
+    
+    
+    */
+    .modal-body .testForm label {
+        min-width: 280px;
+        max-width: 280px;
+        height: 400px;
+    }
+
+    .modal-body .testForm .smallCheckBox {
+        width: 280px;
+    }
+
+    .modal-body .testForm label h6 {
+        font-size: 18px;
+    }
+
+    .modal-body .testForm label ol {
+        font-size: 14px;
+    }
+
+    .modal-body .testForm label p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:1050px) {
+
+    /* 
+    
+    
+    */
+    /* modal edit */
+    /* 
+    
+    
+    */
+    .modal-body .testForm label {
+        min-width: 250px;
+        max-width: 250px;
+        height: 400px;
+        padding: 10px 5px;
+    }
+
+    .modal-body .testForm .smallCheckBox {
+        width: 250px;
+    }
+
+    .modal-body .testForm label h6 {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .modal-body .testForm label ol {
+        font-size: 14px;
+    }
+
+    .modal-body .testForm label p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .testBody {
+        height: 80vw;
+        padding: 50px 25px 50px 25px;
+    }
+
+    .testBody .title {
+        font-size: 1rempx;
+    }
+
+    /* 
+    
+    
+    */
+    /* modal edit */
+    /* 
+    
+    
+    */
+    .modal-body .testForm label {
+        min-width: 320px;
+        max-width: 320px;
+        height: 400px;
+        padding: 10px 5px;
+    }
+
+    .modal-body .testForm .smallCheckBox {
+        width: 250px;
+    }
+
+    .modal-body .testForm label h6 {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+    .modal-body .testForm label ol {
+        font-size: 16px;
+    }
+
+    .modal-body .testForm label p {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .modal-body .testForm label {
+        min-width: 100%;
+        max-width: 100%;
+        height: fit-content;
+        padding: 10px 5px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 10px 0;
+        padding: 10px 20px;
+        flex-wrap: wrap;
+    }
+
+    .modal-body .testForm .smallCheckBox {
+        width: 100%;
+        height: fit-content;
+    }
+
+    .modal-body .testForm label h6 {
+        width: 70%;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        letter-spacing: 2px;
+    }
+
+    .modal-body .testForm label ol {
+        display: none;
+    }
+
+    .modal-body .testForm label p {
+        display: none;
+    }
+
+    .viewMoreButton {
+        width: 30%;
+        display: block;
+        font-size: 1rem;
+        word-wrap: break-word;
+    }
+
+    .modal-body .testForm label .collapse {
+        margin: 20px 0px;
+    }
+
+    .modal-body .testForm label .collapse .seeMoreContent ol {
+        min-width: 100%;
+        display: block;
+    }
+
+    .modal-body .testForm label .collapse .seeMoreContent p {
+        display: block;
+    }
+}
+
+@media screen and (max-width:690px) {
+    .testBody {
+        height: 110vw;
+        padding: 50px 25px 50px 25px;
+    }
+
+    .testBody .title {
+        font-size: 1rempx;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .testBody {
+        height: 130vw;
+        padding: 50px 25px 50px 25px;
+    }
+
+    .testBody .title {
+        font-size: 1rempx;
+    }
+
+    .modal-header {
+        padding: 0 10px;
+    }
+
+    .modal-header h3 {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .modal-header p {
+        font-size: 16;
+    }
+
+    .modal-header p:last-child {
+        display: none;
+    }
+
+    .modal-body .testForm label {
+        padding: 10px 0px;
+    }
+
+    .modal-body .testForm label h6 {
+        width: 100%;
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+
+    .modal-body .testForm label .viewMoreButton {
+        width: fit-content;
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:420px) {
+    .testBody {
+        height: 150vw;
+        padding: 50px 25px 50px 25px;
+    }
+
+    .testBody .title {
+        font-size: 1rempx;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .modal-header p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width:365px) {
+    .testBody {
+        height: fit-content;
+        padding: 50px 25px 50px 25px;
+        background-image: url('');
+    }
+
+    .testBody .title {
+        font-size: 1.5rem;
+    }
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png"  href="{{ url_for('static', filename='image/favicon.png') }}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        @-webkit-keyframes bounceIn {
+        0% {
+        opacity: 0;
+        -webkit-transform: scale(.3);
+        }
+
+        50% {
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+        }
+
+        70% {
+        -webkit-transform: scale(.9);
+        }
+
+        100% {
+        -webkit-transform: scale(1);
+        }
+        }
+
+        @keyframes bounceIn {
+        0% {
+        opacity: 0;
+        transform: scale(.3);
+        }
+
+        50% {
+        opacity: 1;
+        transform: scale(1.05);
+        }
+
+        70% {
+        transform: scale(.9);
+        }
+
+        100% {
+        transform: scale(1);
+        }
+        }
+        body{
+            background-color:#f4f4f4;
+            font-family: 'Roboto', sans-serif;
+            width:100vw;
+            height:100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container{
+            width: 60%;
+            height:75%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            background-color: white;
+            text-align: center;
+            padding:5px 15px 10px 15px;
+            border-radius: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: bounceIn;
+            animation-name: bounceIn;
+            /* z-index: 1; */
+        }
+        .container img{
+            width:150px;
+            cursor: pointer;
+            transition: 0.5s all;
+            justify-self:flex-start;
+        }
+        .container img:hover{
+        transform: scale(1.1);
+        }
+        .container a{
+            transition: 0.5s all;
+            z-index: 11;
+        }
+        .container a:hover{
+            transform: scale(1.05);
+        }
+    </style>
+
+</head>
+<body onload="deleteSession()">
+        <div class="container">
+            <img alt="petbiotech Logo" src="/static/image/logo.png">
+            <h4>Thank you for using our service, We will get back to you soon!</h4>
+            <p>The invoice will be sent to you via mail</p>
+            <a href="/"
+                style="text-decoration: none;color: #f4f4f4;font-weight: bolder;border: 2px solid rgb(0, 0, 171);padding:5px 10px; border-radius: 10px;background-color: rgb(0, 0, 171);">Take
+                me to home page!</a>
+        </div>
+
+      <!-- <h2 class="text-center mt-5">PLEASE VISIT US AGAIN</h2> -->
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <script>
+          const deleteSession = () => {
+              sessionStorage.removeItem("selectedTests");
+          }
+      </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+.productBody {
+  width: 100%;
+  height: fit-content;
+  background-color: rgb(255, 255, 255);
+  /* Created with https://www.css-gradient.com */
+  /* background: #DAE7FF6E;
+    background: -webkit-linear-gradient(top, #DAE7FF6E, #FFFFFF);
+    background: -moz-linear-gradient(top, #DAE7FF6E, #FFFFFF);
+    background: linear-gradient(to top, #DAE7FF6E, #FFFFFF); */
+  padding: 50px 50px 20px 50px;
+  overflow-x: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(199, 225, 255, 0.601);
+}
+
+.productBody .body1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.productBody .title {
+  letter-spacing: 2px;
+  word-spacing: 8px;
+  word-break: break-all;
+  color: #1c3c98;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: context-menu;
+}
+
+.productBody .underline {
+  width: 150px;
+  height: 5px;
+  background-color: rgb(0, 119, 204);
+  margin-top: -10px;
+  border-radius: 20px;
+  outline: none;
+}
+
+.productBody .productItems {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 50px;
+  gap: 50px;
+  padding: 0 5%;
+}
+
+/* .productBody .productItems .items{
+    margin:20px;
+    width: fit-content;
+    padding:10px 30px;
+    background-color: white;
+    border-radius: 25px;
+    letter-spacing: 2px;
+    word-spacing: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    cursor: context-menu;
+    transition: all 0.25s ease-in-out;
+}
+.productBody .productItems .items:hover{
+    transform: scale(1.1);
+} */
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 430px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  overflow: hidden;
+  border-radius: 10px;
+  /* Remove this if you don't want the 3D effect */
+   /* box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;  */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  /* Safari */
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: darken;
+  color: black;
+  position: relative;
+  padding: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flip-card-front img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-blend-mode: darken;
+  object-fit: cover;
+}
+
+.flip-card-front .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.25rem;
+  color: rgb(255, 255, 255);
+  font-weight: bolder;
+  word-break: normal;
+}
+
+/* Style the back side */
+.flip-card-back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: white;
+  color: dodgerblue;
+  transform: rotateY(180deg) translateY(-100%);
+  font-size: 14px;
+}
+
+.flip-card-back p {
+  text-align: center;
+}
+
+@media screen and (max-width:800px) {
+  .productBody {
+    padding: 50px 25px 50px 25px;
+  }
+
+  .productBody .title {
+    font-size: 1rempx;
+  }
+
+  /* .productBody .productItems .items{
+        text-align: left;
+        width: 100%;
+        margin: 10px 0px;
+        letter-spacing: 1px;
+        word-spacing: 3px;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 3px 15px 0px;
+    }
+    .productBody .productItems .items:hover {
+        transform: scale(1.05);
+    } */
+}
+

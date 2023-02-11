@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/numberCounter.css') }}" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" />
+</head>
+
+<body>
+    {% block numberCounter %}
+    <div class="wrapper" id="counterBody">
+        <!-- <div class="container">
+            <i class="fas fa-utensils"></i>
+            <span class="num" data-val="400" id="counter1" style="margin-top: 5px;">000</span>
+            <span class="text" style="margin-top: 5px;">Meals Delivered</span>
+        </div> -->
+        <div class="container">
+            <!-- <i class="fas fa-smile-beam"></i> -->
+            <lord-icon src="https://cdn.lordicon.com/yrxnwkni.json" trigger="loop" colors="primary:#4be1ec,secondary:#cb5eee" stroke="100"></lord-icon>
+            <div class="counterBlock" style="width: 100%;height:fit-content;display:flex;align-items: center;justify-content: center;">
+                <span class="num" data-val="1000" id="counter2" style="margin-top: 5px;">000</span>
+                <span class="counter-postFix"> +</span>
+            </div>
+            <span class="text" style="margin-top: 5px;">Happy Customers</span>
+        </div>
+        <div class="container">
+            <!-- <iconify-icon icon="akar-icons:clock"></iconify-icon> -->
+            <lord-icon src="https://cdn.lordicon.com/uutnmngi.json" trigger="loop" stroke="100"></lord-icon>
+            <div class="counterBlock"
+                style="width: 100%;height:fit-content;display:flex;align-items: center;justify-content: center;">
+            <span class="num" data-val="48" id="counter3" style="margin-top: 5px;">000</span>
+            <span class="counter-postFix"> hr</span>
+            </div>
+            <span class="text" style="margin-top: 5px;">Fast Results</span>
+        </div>
+        <div class="container">
+            <lord-icon src="https://cdn.lordicon.com/ggqtvqxi.json" trigger="loop" stroke="100"></lord-icon>
+            <div class="counterBlock"
+                style="width: 100%;height:fit-content;display:flex;align-items: center;justify-content: center;">
+            <span class="num" data-val="20000" id="counter4" style="margin-top: 5px;">000</span>
+            <span class="counter-postFix"> +</span>
+            </div>
+            <span class="text" style="margin-top: 5px;">Reports Submitted</span>
+        </div>
+    </div>
+    {% endblock numberCounter %}
+    <script src="https://cdn.lordicon.com/qjzruarw.js"></script>
+    <script>
+        let displayCount1 = 1;
+        let displayCount2 = 1;
+        let displayCount3 = 1;
+        let displayCount4 = 1;
+        // counter 1
+        const playNumbers1 = () => {
+            if (displayCount1 != 0) {
+                displayCount1 = 0;
+                let valueDisplays = document.getElementById("counter1");
+                let interval = 170;
+                let startValue = 0;
+                let endValue = parseInt(valueDisplays.getAttribute("data-val"));
+                let duration = Math.floor(interval / endValue);
+                let counter1 = setInterval(function () {
+                    startValue += 1;
+                    valueDisplays.textContent = startValue;
+                    if (startValue == endValue) {
+                        clearInterval(counter1);
+                    }
+                }, duration);
+            }
+        }
+        // counter 2
+        const playNumbers2 = () => {
+            if (displayCount2 != 0) {
+                displayCount2 = 0;
+                let valueDisplays = document.getElementById("counter2");
+                let interval = 150;
+                let startValue = 0;
+                let endValue = parseInt(valueDisplays.getAttribute("data-val"));
+                let duration = Math.floor(interval / endValue);
+                let counter2 = setInterval(function () {
+                    startValue += 5;
+                    valueDisplays.textContent = startValue;
+                    if (startValue == endValue) {
+                        clearInterval(counter2);
+                    }
+                }, duration);
+            }
+        }
+        // counter 3
+        const playNumbers3 = () => {
+            if (displayCount3 != 0) {
+                displayCount3 = 0;
+                let valueDisplays = document.getElementById("counter3");
+                let interval = 130;
+                let startValue = 0;
+                let endValue = parseInt(valueDisplays.getAttribute("data-val"));
+                let duration = Math.floor(interval / endValue);
+                let counter3 = setInterval(function () {
+                    startValue += 1;
+                    valueDisplays.textContent = startValue;
+                    if (startValue == endValue) {
+                        clearInterval(counter3);
+                    }
+                }, duration);
+            }
+        }
+        // counter 4
+        const playNumbers4 = () => {
+            if (displayCount4 != 0) {
+                displayCount4 = 0;
+                // let valueDisplays = document.querySelectorAll(".num");
+                // let interval = 10;
+                // valueDisplays.forEach((valueDisplay) => {
+                //     let startValue = 0;
+                //     let endValue = parseInt(valueDisplay.getAttribute("data-val"));
+                //     let duration = Math.floor(interval / endValue);
+                //     let counter = setInterval(function () {
+                //         startValue += 1;
+                //         valueDisplay.textContent = startValue;
+                //         if (startValue == endValue) {
+                //             clearInterval(counter);
+                //         }
+                //     }, duration);
+                // });
+                let valueDisplays = document.getElementById("counter4");
+                let interval = 110;
+                let startValue = 0;
+                let endValue = parseInt(valueDisplays.getAttribute("data-val"));
+                let duration = Math.floor(interval / endValue);
+                let counter4 = setInterval(function () {
+                    startValue += 100;
+                    valueDisplays.textContent = startValue;
+                    if (startValue == endValue) {
+                        clearInterval(counter4);
+                    }
+                }, duration);
+            }
+        }
+    </script>
+</body>
+
+</html>

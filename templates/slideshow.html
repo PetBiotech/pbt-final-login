@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Swiper part-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/swiper-bundle.min.css') }}">
+    <!-- CSS Part-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/slideshow.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    {% block slideshow %}
+    <div class="testmonialsBody" id="testmonialsBody">
+    <div class="body1">
+        <p class="title">Testimonials</p>
+        <div class="underline"></div>
+    </div>
+        <div class="slide-container swiper">
+            <div class="slide-content">
+                <div class="card-wrapper swiper-wrapper">
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+                            <div class="card-image">
+                                <img src="{{ url_for('static', filename='image/user1.jpeg') }}" alt="User" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name"><b>Neha</b><br>Pet: Snow</h2>
+                            <!-- pet owner 1 -->
+                            <p class="description">“Appreciate the quality of service that I’ve received from PetBiotech. I received the reports within 24 hrs, I was reassured about their quality of service."</p>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="{{ url_for('static', filename='image/user2.jpeg') }}" alt="User" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name"><b>Kaustubh</b><br>Pet: Simba</h2>
+                            <!-- Pet Owner 2 -->
+                            <p class="description">"I needed a Neurological test done for my beloved Simba very quickly, thats when my Vet suggested PetBiotech, I really appreciate the quick reports even though the samples were sent from Kolkata."</p>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="{{ url_for('static', filename='image/user3.jpeg') }}" alt="User" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name"><b>Keerthi</b><br>Pet: Chintu</h2>
+                            <p class="description">"Chintu was to donate blood and we needed to get her tested for Ticks, we faced a lot of problems due to unreliable test results, finally we used PetBiotech, I was extremely happy with their services."</p>
+                        </div>
+                    </div>
+                    <div class="card swiper-slide">
+                        <div class="image-content">
+                            <span class="overlay"></span>
+
+                            <div class="card-image">
+                                <img src="{{ url_for('static', filename='image/user4.jpeg') }}" alt="User" class="card-img">
+                            </div>
+                        </div>
+
+                        <div class="card-content">
+                            <h2 class="name"><b>Anand</b><br>Pet: Rio</h2>
+                            <p class="description">"My pet bird Rio fell sick suddenly, I'm glad that my doctor suggested Pet Biotech, I was impressed with the credentials of their team. I knew I can trust them with the diagnosis."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
+        </div>
+        </div>
+    {% endblock slideshow %}
+    <!-- Swiper Ka Script-->
+    <script src="{{ url_for('static', filename='script/swiper-bundle.min.js') }}">
+    </script>
+    <!-- Java Script-->
+    <script src="{{ url_for('static', filename='script/slideshow.js') }}"></script>
+</body>
+</html>

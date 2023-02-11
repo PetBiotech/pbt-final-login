@@ -1,0 +1,538 @@
+@keyframes slideIn {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+@-moz-keyframes slideIn {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+@-o-keyframes slideIn {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+@-webkit-keyframes slideIn {
+    0% {
+        right: -100%;
+    }
+
+    100% {
+        right: 0;
+    }
+}
+
+@keyframes slideOut {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: -100%;
+    }
+}
+
+@-moz-keyframes slideOut {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: -100%;
+    }
+}
+
+@-o-keyframes slideOut {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: -100%;
+    }
+}
+
+@-webkit-keyframes slideOut {
+    0% {
+        right: 0;
+    }
+
+    100% {
+        right: -100%;
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        bottom: 15px;
+    }
+
+    100% {
+        bottom: 85px;
+    }
+}
+
+@-o-keyframes moveUp {
+    0% {
+        bottom: 15px;
+    }
+
+    100% {
+        bottom: 85px;
+    }
+}
+
+@-webkit-keyframes moveUp {
+    0% {
+        bottom: 15px;
+    }
+
+    100% {
+        bottom: 85px;
+    }
+}
+
+@-moz-keyframes moveUp {
+    0% {
+        bottom: 15px;
+    }
+
+    100% {
+        bottom: 85px;
+    }
+}
+
+@keyframes moveDown {
+    0% {
+        bottom: 85px;
+    }
+
+    100% {
+        bottom: 15px;
+    }
+}
+
+@-o-keyframes moveDown {
+    0% {
+        bottom: 85px;
+    }
+
+    100% {
+        bottom: 15px;
+    }
+}
+
+@-webkit-keyframes moveDown {
+    0% {
+        bottom: 85px;
+    }
+
+    100% {
+        bottom: 15px;
+    }
+}
+
+@-moz-keyframes moveDown {
+    0% {
+        bottom: 85px;
+    }
+
+    100% {
+        bottom: 15px;
+    }
+}
+
+.topHeader {
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: hidden;
+    filter: blur(2px);
+}
+
+.navBar {
+    z-index: 990;
+    /* position: fixed; */
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* height: 100px; */
+    height: 30%;
+    padding: 0px 40px;
+    padding-left: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    background-color: rgb(149, 207, 255);
+    /*    background: linear-gradient(75deg,#93a5cf,#b4ece9);
+*/
+    /* background: linear-gradient(180deg, #0dccff, #677cff, #4760ff); */
+        /* background: white; */
+        /* box-shadow: 0 1px 10px rgba(0,0,0,0.5); */
+    background-size: 180% 180%;
+    background: rgb(34, 193, 195);
+    background: radial-gradient(circle, rgba(34, 193, 195, 1) 0%, rgba(207, 255, 254, 1) 0%, rgba(149, 255, 246, 1) 100%);
+    /*background: linear-gradient(51deg, #dbf4ff, #2f5cff);*/
+}
+
+.navBar .navLeft {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 95%;
+    /* background-color: red; */
+    cursor: pointer;
+}
+
+.navBar .navLeft img {
+    transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    -webkit-transition: all 0.25s ease-in-out;
+    /* width: 100%; */
+    width: 100%;
+}
+
+.navBar .navLeft img:hover {
+    transform: scale(1.025);
+    -o-transform: scaleX(1.025);
+    -moz-transform: scaleX(1.0251);
+    -webkit-transform: scaleX(1.025);
+}
+
+.navBar .navRight {
+    width: 80%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+
+.navBar .navRight .navItems {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.navBar .navRight .navItems a {
+    text-decoration: none;
+    color: #303030;
+    color: rgb(6, 0, 92);
+    /* color: rgb(255, 255, 255); */
+    font-weight: bold;
+    margin: 0 25px;
+    letter-spacing: 1px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+}
+
+.navBar .navRight .navItems a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+    -moz-transition: transform 0.25s ease-out;
+    -o-transition: transform 0.25s ease-out;
+    -webkit-transition: transform 0.25s ease-out;
+}
+
+.navBar .navRight .navItems a:hover:after {
+    transform: scaleX(1);
+    -o-transform: scaleX(1);
+    -moz-transform: scaleX(1);
+    -webkit-transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.navBar .hamburgerNav,
+.navBar .crossNav {
+    display: none;
+    position: relative;
+    right: 20px;
+    cursor: pointer;
+    font-size: 40px;
+    color: white;
+    color:rgb(6, 0, 92);
+}
+
+.navBar .navCutBody {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.submitSampleButton {
+    position: fixed;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(42, 113, 255);
+    z-index: 989;
+    padding: 10px 30px;
+    border-radius: 25px;
+    outline: none;
+    cursor: pointer;
+    width: fit-content;
+    text-align: center;
+    transition: all 0.5s ease-in-out;
+    box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    /*background: linear-gradient(51deg, #12abe1, #e163ff, #5455ff);*/
+    background: linear-gradient(51deg, #5455ff, #12abe1, #2f5cff);
+    background-size: 180% 180%;
+    animation: gradient-animation 3s ease infinite;
+}
+
+.submitSampleButton a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.submitSampleButton:hover {
+    background-color: rgb(94, 147, 255);
+}
+
+.cartIcon,
+.moveUpIcon {
+    position: fixed;
+    right: 30px;
+    bottom: 25px;
+    background-color: rgb(42, 113, 255);
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 15px 17px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 8;
+    animation: all ease-in-out 0.5s forwards;
+    -o-animation: all ease-in-out 0.5s forwards;
+    -webkit-animation: all ease-in-out 0.5s forwards;
+    -moz-animation: all ease-in-out 0.5s forwards;
+    /* box-shadow: rgba(100, 100, 111, 0.5) 0px 7px 29px 0px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+        rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    background: linear-gradient(30deg, #12abe1, #5455ff);
+    background: linear-gradient(51deg, #5455ff, #12abe1, #2f5cff);
+    background-size: 180% 180%;
+}
+
+.cartIcon {
+    bottom: 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.cartIcon:hover {
+    color: white;
+}
+
+.moveUpIcon {
+    right: -100%;
+    margin-right: 30px;
+}
+
+.moveUpIcon a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+@media screen and (max-width:1200px) {
+    .navBar {
+        padding: 0 25px;
+        padding-left: 50px;
+    }
+
+    .navBar .navRight .navItems a {
+        margin: 0 25px;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width:1100px) {
+    .navBar {
+        padding: 0 10px;
+        padding-left: 50px;
+    }
+
+    .navBar .navRight .navItems a {
+        margin: 0 20px;
+        letter-spacing: 1px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width:950px) {
+    .navBar {
+        padding: 0 10px;
+        height: 135px;
+        padding-left: 35px;
+        position: fixed;
+    }
+
+
+    .navBar .hamburgerNav {
+        display: block;
+        z-index: 1000;
+    }
+
+    .navBar .navLeft {
+        justify-content: flex-start;
+        width: 50%;
+    }
+
+    .navBar .navLeft img {
+        width: 180px;
+    }
+
+    .navBar .navRight {
+        display: none;
+        position: absolute;
+        /* position: fixed; */
+        width: fit-content;
+        height: 100vh;
+        padding: 10px 30px 0 60px;
+        right: 0;
+        top: 135px;
+        background-color: white;
+        box-shadow: -1px 10px 15px 0.25px rgba(0, 0, 0, 0.35);
+        z-index: 999;
+        animation: 0.5s ease-in-out forwards;
+        -o-animation: 0.5s ease-in-out forwards;
+        -moz-animation: 0.5s ease-in-out forwards;
+        -webkit-animation: 0.5s ease-in-out forwards;
+        /*  */
+        background: rgba(255, 255, 255, 1);
+        /* background: rgba(139, 190, 255, 0.5); */
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+        backdrop-filter: blur(9.5px);
+        -webkit-backdrop-filter: blur(9.5px);
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 1px 5px 0.25px rgba(39, 39, 39, 0.25);
+    }
+
+    .navBar .navCutBody {
+        top: 135px;
+        z-index: 998;
+    }
+
+    .navBar .navRight .navItems {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-end;
+    }
+
+    .navBar .navRight .navItems a {
+        margin: 20px 0px;
+        letter-spacing: 1px;
+        font-size: 1em;
+        text-align: right;
+        color: rgb(0, 0, 0);
+    }
+
+    .submitSampleButton {
+        left: 5%;
+        transform: translateX(0%);
+        -o-transform: translateX(0%);
+        -webkit-transform: translateX(0%);
+        -moz-transform: translateX(0%);
+    }
+}
+
+@media screen and (max-width:450px) {
+    .navBar {
+        height: 100px;
+    }
+    .navBar .navLeft img {
+        width: 150px;
+    }
+    .navBar .navRight{
+        top:100px;
+    }
+    .navBar .navCutBody{
+        top:100px;
+    }
+}
+
+@media screen and (max-height:450px) {
+    .navBar .navRight .navItems a {
+        margin: 10% 0px;
+    }
+}
+
+@media screen and (max-height:340px) {
+    .navBar .navRight .navItems a {
+        margin: 5% 0px;
+    }
+}
+
+@media screen and (min-width:1800px) {
+    .navBar {
+        height: 150px;
+    }
+
+    .navBar .navLeft img {
+        width: 55%;
+    }
+}
+
+@media screen and (min-width:2000px) {
+    .navBar {
+        height: 150px;
+    }
+
+    .navBar .navLeft img {
+        width: 50%;
+    }
+}

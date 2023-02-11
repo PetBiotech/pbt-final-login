@@ -1,0 +1,48 @@
+footer{
+    width:100%;
+    height:fit-content;
+    padding:50px 50px 100px 50px;
+    overflow-x: hidden;
+    background-color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 100vh;
+    max-height:fit-content;
+}
+footer .title{
+    font-size: 30px;
+    color:white;
+    margin: 0 0 50px 0;
+}
+footer .items{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    color: white;
+    gap: 50px;
+}
+footer .items h5,
+footer .items h6 {
+    color:rgb(160, 160, 160);
+}
+footer .items .nav ul{
+    list-style-type: none;
+    cursor: context-menu;
+}
+footer .items .nav ul a{
+    font-size: 16px;
+    color: white;
+}
+footer .items .contact{
+    font-size: 10px;
+    cursor: context-menu;
+}
+footer .items .aboutus a{
+    font-size: 16px;
+    color: white;
+}

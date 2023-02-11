@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static',filename='style/faq.css') }}">
+</head>
+
+<body>
+    {% block faq %}
+    <div class="faqBody" id="faqBody">
+        <div class="body1">
+            <p class="title">FAQ</p>
+            <div class="underline"></div>
+        </div>
+        <div class="faqItems">
+            <div class="accordion" id="accordionExample">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                                data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                Why use PCR to detect infectious diseases of dogs and cats?
+                            </button>
+                        </h2>
+                    </div>
+
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                           The use of PCR (Polymerase Chain Reaction) in molecular testing has become the industry standard for diagnosing diseases. Diagnostic, research, and monitoring opportunities made possible by PCR's sensitivity, specificity, and speed in identifying infections and mutations are not possible with other procedures. The diagnosis of sickness in dogs, cats, and other animals can be greatly aided by molecular approaches. In PCR testing, nucleic acid (DNA or RNA) is extracted from a specimen and amplified using highly specific primers complementary to known target sequences (with an additional reverse transcription step in the case of RNA). Internal controls track extraction and PCR effectiveness while both positive and negative controls are active at the same time. To check for repeatability, each sample is run in duplicate aliquots. Modern protocols and sophisticated instruments are used to visualize and record amplification.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingTwo">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                                aria-controls="collapseTwo">
+                                When should samples be collected?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                        <div class="card-body">
+                            Infrequent pathogen sheds are common. Therefore, it is typically used for ante-mortem testing.
+                            It is preferable to take samples from an animal when it is ill. Pathogen titers frequently peak early. 
+Ideally, samples should be taken at the beginning of a session of symptoms. 
+symptoms, as well as peak symptom periods. Treatments may be able to lessen symptoms. 
+and shedding briefly relieves the infection but does not completely. If therapy was administered.
+Usually, you should wait at least a week after receiving treatment, and/or 
+wait until the symptoms come back before obtaining a sample for analysis.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseThree" aria-expanded="false"
+                                aria-controls="collapseThree">
+                                How to pack and dispatch?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <p>INSTRUCTIONS FOR PACKING</p>
+                            <ol>
+                            <li>POUR 2/3 ML OF BLOOD/ URINE / SALIVA (AS APPLICABLE) SAMPLE IN A EDTA VIAL.</li>
+                            <li>WRAP IN COTTON</li>
+                            <li>PLACE IN ZIPLINE BAG / BUBBLE WRAP</li>
+                            <li>ITEMIZED CONTENT LIST / CASE SHEET GIVING RELEVANT DETAILS.</li>
+                            <li>ENSURE CUSHION OF COTTON BETWEEN TWO WRAPS.</li>
+                            <li>PLACE CONTENTS IN A PLASTIC BOX OF MINIMUM 4 INCH BY 4 INCH SIZE.</li>
+                            <li>PUT THE BOX IN AN ENVELOPE WITH SHIPPING ADDRESS</li>
+                            <li>ENDORSE UN3373 WITH BLACK MARKER/ SKETCH PEN ON TOP OF THE ENVELOPE</li>
+                            <li>UN3373</li>
+                            </ol>
+                            <br>
+                            <img class="img-fluid" alt="Packed Sample" src="{{ url_for('static',filename='image/packedItem.jpeg') }}">
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseFour" aria-expanded="false"
+                                aria-controls="collapseFour">
+                                How is molecular, PCR-based testing complementary to other kinds of testing?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            <ul type="disk">
+                                <li>Cross-reactivity decreases the specificity of many serological tests since it is possible for organisms other than the target to produce a positive result. On the other hand, because they identify a genetic sequence that is particular to the target pathogen, molecular assays are extremely specific. The ability to differentiate even closely related disease strains is common.</li>
+                                <li>While other testing techniques detect antibodies to infections that may not still be present, molecular assays detect the genetic material of the pathogen itself — a clear indication of the pathogen's presence in the sample — which reduces the influence of some kinds of false positives.</li>
+                                <li>By using PCR, infections are frequently detected relatively early in the onset of symptoms. Elevated antibody levels, which may not appear for days or weeks, are not necessary for detection.</li>
+                                <li> Animals with high viral titers may actually show relatively low antibody levels as an infection stresses their immune systems. If antibody testing is the only method employed, this may lead to erroneous negative findings.</li>
+                                <li>Because of its exceptional sensitivity, PCR can detect a target pathogen in a sample, even when it is present in extremely minute quantities and from very small sample volumes.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header" id="headingThree">
+                        <h2 class="mb-0">
+                            <button class="btn btn-link btn-block text-left collapsed" type="button"
+                                data-toggle="collapse" data-target="#collapseFive" aria-expanded="false"
+                                aria-controls="collapseFive">
+                                How to collect Blood and other liquid samples?
+                            </button>
+                        </h2>
+                    </div>
+                    <div id="collapseFive" class="collapse" aria-labelledby="headingThree"
+                        data-parent="#accordionExample">
+                        <div class="card-body">
+                            Fill EDTA (purple top) tubes with freshly drawn whole blood samples, seal the tubes, and then quickly invert the tubes several times to fully mix the blood with the preservation material. Though we can test from heparinized blood, avoiding using heparin (green top) tubes is preferable. Other liquid samples should be collected in simple tubes or other clean, leak-proof containers, such as lavage, serum, or cerebrospinal fluid. If shipping won't be completed for more than a few hours following collection, refrigerate liquid samples. Unless there is a likelihood that samples will be in transit for longer than 24 hours, room temperature shipment is sufficient.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endblock faq %}
+</body>
+
+</html>

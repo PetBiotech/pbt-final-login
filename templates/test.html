@@ -1,0 +1,1311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/test.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/testBookingDetails.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    {% block test %}
+    <div class="testBody" id="testBody">
+        <div class="body1">
+            <p class="title">Tests</p>
+            <div class="underline"></div>
+            <p style="color:red;letter-spacing:2px;word-spacing:5px;text-align:center;">Click any of the tests</p>
+        </div>
+        <div class="tests">
+            <div class="testHeader">
+                <div data-toggle="modal" data-target="#canineBackdrop">
+                    <button>Canine Tests</button>
+                </div>
+                <div data-toggle="modal" data-target="#felineBackdrop">
+                    <button>Feline Tests</button>
+                </div>
+                <div data-toggle="modal" data-target="#avianBackdrop">
+                    <button>Avian Tests</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal for canine tests -->
+    <div class="modal fade" id="canineBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="canineBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img alt="Logo" src="{{ url_for('static',filename='image/logo.png') }}">
+                    <h3 class="modal-title" id="canineBackdropLabel">
+                        <p>Canine Tests Panel</p>
+                        <p style="font-size:16px;color:red">( Please click on the required panel test )</p>
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" class="testForm">
+                        <!-- test 1 -->
+                        <label for="checkboxId1" class="checkboxes" id="checkbox1" onclick="selectCheckBox(1)">
+                            <h6>Respiratory Panel</h5>
+                                <ol type="i">
+                                    <li>Bordetella bronchiseptica</li>
+                                    <li>Canine adenovirus type-2</li>
+                                    <li>Canine distemper virus</li>
+                                    <li>Canine herpesvirus</li>
+                                    <li>Canine parainfluenza</li>
+                                    <li>Canine respiratory coronavirus</li>
+                                    <li>Influenza type A</li>
+                                </ol>
+                                <p><strong>Specimen requirement:</strong> Throat swab+nasal discharge swab+eye
+                                    discharge swab</p>
+                                <!-- 
+
+
+
+                            -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#canineTestCollapse1" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="canineTestCollapse1">
+                                    <div class="card card-body seeMoreContent">
+                                        <ol type="i">
+                                            <li>Bordetella bronchiseptica</li>
+                                            <li>Canine adenovirus type-2</li>
+                                            <li>Canine distemper virus</li>
+                                            <li>Canine herpesvirus</li>
+                                            <li>Canine parainfluenza</li>
+                                            <li>Canine respiratory coronavirus</li>
+                                            <li>Influenza type A</li>
+                                        </ol>
+                                        <p><strong>Specimen requirement:</strong> Throat swab+nasal discharge swab+eye
+                                            discharge swab</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                             -->
+                        </label>
+                        <input type="checkbox" value="ct_id1" name="canineTest1" id="checkboxId1"
+                            class="canineTest1 testBox">
+                        <!-- test 2 -->
+                        <label for="checkboxId2" class="checkboxes" id="checkbox2" onclick="selectCheckBox(2)">
+                            <h6>Neurological panel</h5>
+                                <ol type="i">
+                                    <li>Toxoplasma gondii</li>
+                                    <li>Neospora caninum</li>
+                                    <li>Canine distemper virus</li>
+                                    <li>Cryptococcus neoformans</li>
+                                    <li>Rabies virus (Sample: Saliva swab or Brain)</li>
+                                </ol>
+                                <p><strong>Specimen requirement:</strong> 1ml CSF, or 0.2 ml tissue, 2ml blood</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#canineTestCollapse2" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="canineTestCollapse2">
+                                    <div class="card card-body seeMoreContent">
+                                        <ol type="i">
+                                            <li>Toxoplasma gondii</li>
+                                            <li>Neospora caninum</li>
+                                            <li>Canine distemper virus</li>
+                                            <li>Cryptococcus neoformans</li>
+                                            <li>Rabies virus (Sample: Saliva swab or Brain)</li>
+                                        </ol>
+                                        <p><strong>Specimen requirement:</strong> 1ml CSF, or 0.2 ml tissue, 2ml blood
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="ct_id2" name="canineTest2" id="checkboxId2"
+                            class="canineTest2 testBox">
+                        <!-- test 3 -->
+                        <label for="checkboxId3" class="checkboxes" id="checkbox3" onclick="selectCheckBox(3)">
+                            <h6>Gastrointestinal panel</h5>
+                                <ol type="i">
+                                    <li>Campylobacter screen</li>
+                                    <li>Canine parvovirus</li>
+                                    <li>Clostridium perfringens</li>
+                                    <li>Cryptosporidium screen</li>
+                                    <li>Giardia screen</li>
+                                    <li>Salmonella screen</li>
+                                    <li>Canine enteric coronavirus</li>
+                                </ol>
+                                <p><strong>Specimen requirement:</strong> 3 rectal swabs, fecal sample(1ml)</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#canineTestCollapse3" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="canineTestCollapse3">
+                                    <div class="card card-body seeMoreContent">
+                                        <ol type="i">
+                                            <li>Campylobacter screen</li>
+                                            <li>Canine parvovirus</li>
+                                            <li>Clostridium perfringens</li>
+                                            <li>Cryptosporidium screen</li>
+                                            <li>Giardia screen</li>
+                                            <li>Salmonella screen</li>
+                                            <li>Canine enteric coronavirus</li>
+                                        </ol>
+                                        <p><strong>Specimen requirement:</strong> 3 rectal swabs, fecal sample(1ml)</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="ct_id3" name="canineTest3" id="checkboxId3"
+                            class="canineTest3 testBox">
+                        <!-- test 4 -->
+                        <label for="checkboxId4" class="checkboxes" id="checkbox4" onclick="selectCheckBox(4)">
+                            <h6>Haemoprotozoan/Blood parasites (Tick Panel)</h5>
+                                <ol type="i">
+                                    <li>Babesia Vogeli</li>
+                                    <li>Babesia Canis</li>
+                                    <li>Babesia Rossi</li>
+                                    <li>Babesia Gibsoni</li>
+                                    <li>Ehrlichia canis</li>
+                                    <li>Hepatozoon canis</li>
+                                    <li>Anaplasma spp.</li>
+                                    <li>Trypanosoma evansii</li>
+                                </ol>
+                                <p><strong>Specimen requirement:</strong> 2 ml whole blood in EDTA (purple top) tube, or
+                                    0.2 ml synovial fluid, or tick</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#canineTestCollapse4" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="canineTestCollapse4">
+                                    <div class="card card-body seeMoreContent">
+                                        <ol type="i">
+                                            <li>Babesia Vogeli</li>
+                                            <li>Babesia Canis</li>
+                                            <li>Babesia Rossi</li>
+                                            <li>Babesia Gibsoni</li>
+                                            <li>Ehrlichia canis</li>
+                                            <li>Hepatozoon canis</li>
+                                            <li>Anaplasma spp.</li>
+                                            <li>Trypanosoma evansii</li>
+                                        </ol>
+                                        <p><strong>Specimen requirement:</strong> 2 ml whole blood in EDTA (purple top)
+                                            tube, or
+                                            0.2 ml synovial fluid, or tick</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="ct_id4" name="canineTest4" id="checkboxId4"
+                            class="canineTest4 testBox">
+                        <!-- test 5 -->
+                        <label for="checkboxId5" class="checkboxes" id="checkbox5" onclick="selectCheckBox(5)">
+                            <h6>Babesia Panel Test (o4)</h5>
+                                <ol type="i">
+                                    <li>Babesia Vogeli</li>
+                                    <li>Babesia Canis</li>
+                                    <li>Babesia Rossi</li>
+                                    <li>Babesia Gibsoni</li>
+                                </ol>
+                                <p><strong>Specimen requirement:</strong> 2 ml whole blood in EDTA (purple top) tube, or
+                                    0.2 ml synovial fluid, or tick</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#canineTestCollapse5" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="canineTestCollapse5">
+                                    <div class="card card-body seeMoreContent">
+                                        <ol type="i">
+                                            <li>Babesia Vogeli</li>
+                                            <li>Babesia Canis</li>
+                                            <li>Babesia Rossi</li>
+                                            <li>Babesia Gibsoni</li>
+                                        </ol>
+                                        <p><strong>Specimen requirement:</strong> 2 ml whole blood in EDTA (purple top)
+                                            tube, or
+                                            0.2 ml synovial fluid, or tick</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="ct_id5" name="canineTest5" id="checkboxId5"
+                            class="canineTest5 testBox">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Done</button>
+                    <!-- <button  onclick="submitTestForm()" type="button" class="btn btn-success " data-dismiss="modal" href="/showCart/1/ [&quot;ct_id1&quot;]">Go To Cart</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        onclick="document.getElementById('cartIcon').click();">Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal for feline tests -->
+    <div class="modal fade" id="felineBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="felineBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img alt="Logo" src="{{ url_for('static',filename='image/logo.png') }}">
+                    <h3 class="modal-title" id="felineBackdropLabel">
+                        <p>Feline Tests Panel</p>
+                        <p style="font-size:16px;color:red">( Please click on the required panel test )</p>
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" class="testForm">
+                        <!-- test 1 -->
+                        <label for="checkboxId6" class="checkboxes" id="checkbox6" onclick="selectCheckBox(6)">
+                            <h6>Neurological Panel</h5>
+                                <ol type="i">
+                                    <li>Toxoplasma gondii</li>
+                                    <li>Cryptococcus neoformans</li>
+                                    <li>Feline infectious peritonitis virus</li>
+                                    <li>Feline panleukopenia virus</li>
+                                    <li>Feline immunodeficiency virus</li>
+                                    <li>Rabies (Sample: Saliva swab or Brain)</li>
+                                </ol>
+                                <p><strong>Specimen requirement:</strong>1ml CSF, or 0.2 ml tissue</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#felinetestCollapse1" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="felinetestCollapse1">
+                                    <div class="card card-body seeMoreContent">
+                                        <ol type="i">
+                                            <li>Toxoplasma gondii</li>
+                                            <li>Cryptococcus neoformans</li>
+                                            <li>Feline infectious peritonitis virus</li>
+                                            <li>Feline panleukopenia virus</li>
+                                            <li>Feline immunodeficiency virus</li>
+                                            <li>Rabies (Sample: Saliva swab or Brain)</li>
+                                        </ol>
+                                        <p><strong>Specimen requirement:</strong>1ml CSF, or 0.2 ml tissue</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="ft_id1" name="felinetest1" id="checkboxId6"
+                            class="felinetest1 testBox">
+                        <!-- test 2 -->
+                        <label for="checkboxId7" class="checkboxes" id="checkbox7" onclick="selectCheckBox(7)">
+                            <h6>Respiratory Panel</h5>
+                                <ol type="i">
+                                    <li>Bordetella bronchiseptica</li>
+                                    <li>Chlamydophila felis</li>
+                                    <li>Feline calicivirus (FCV)</li>
+                                    <li>Feline herpesvirus (FHV-1; aka feline rhinotracheitis virus)</li>
+                                    <li>Influenza type A</li>
+                                    <li>Mycoplasma felis</li>
+                                </ol>
+                                <p><strong>Specimen requirement:</strong> Throat swab Blood+nasal discharge swab+eye
+                                    discharge swab</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#felinetestCollapse2" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="felinetestCollapse2">
+                                    <div class="card card-body seeMoreContent">
+                                        <ol type="i">
+                                            <li>Bordetella bronchiseptica</li>
+                                            <li>Chlamydophila felis</li>
+                                            <li>Feline calicivirus (FCV)</li>
+                                            <li>Feline herpesvirus (FHV-1; aka feline rhinotracheitis virus)</li>
+                                            <li>Influenza type A</li>
+                                            <li>Mycoplasma felis</li>
+                                        </ol>
+                                        <p><strong>Specimen requirement:</strong> Throat swab Blood+nasal discharge
+                                            swab+eye
+                                            discharge swab</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="ft_id2" name="felinetest2" id="checkboxId7"
+                            class="felinetest2 testBox">
+                        <!-- test 3 -->
+                        <label for="checkboxId8" class="checkboxes" id="checkbox8" onclick="selectCheckBox(8)">
+                            <h6>Gastrointestinal panel</h5>
+                                <ol type="i">
+                                    <li>Feline enteric coronavirus</li>
+                                    <li>Feline panleukopenia virus/Canine parvovirus</li>
+                                    <li>Campylobacter screen</li>
+                                    <li>Clostridium</li>
+                                    <li>Cryptosporidium screen</li>
+                                    <li>Giardia screen</li>
+                                    <li>Salmonella screen</li>
+                                    <li>Toxoplasma gondii</li>
+                                </ol>
+                                <p><strong>Specimen requirement:</strong> 1 ml feces, or 3 standard swabs with tips
+                                    well-coated with diarrhea, or 3 rectal swabs from a cat with active diarrhea.</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#felinetestCollapse3" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="felinetestCollapse3">
+                                    <div class="card card-body seeMoreContent">
+                                        <ol type="i">
+                                            <li>Feline enteric coronavirus</li>
+                                            <li>Feline panleukopenia virus/Canine parvovirus</li>
+                                            <li>Campylobacter screen</li>
+                                            <li>Clostridium</li>
+                                            <li>Cryptosporidium screen</li>
+                                            <li>Giardia screen</li>
+                                            <li>Salmonella screen</li>
+                                            <li>Toxoplasma gondii</li>
+                                        </ol>
+                                        <p><strong>Specimen requirement:</strong> 1 ml feces, or 3 standard swabs with
+                                            tips
+                                            well-coated with diarrhea, or 3 rectal swabs from a cat with active
+                                            diarrhea.</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="ft_id3" name="felinetest3" id="checkboxId8"
+                            class="felinetest3 testBox">
+                        <!-- test 4 -->
+                        <label for="checkboxId9" class="checkboxes" id="checkbox9" onclick="selectCheckBox(9)">
+                            <h6>Feline Panel</h5>
+                                <ol type="i">
+                                    <li>Feline immunodeficiency virus (FIV)</li>
+                                    <li>Feline infectious peritonitis (FIP)</li>
+                                    <li>Feline leukemia virus (FeLV)</li>
+                                    <li>Mycoplasma haemofelis</li>
+                                </ol>
+                                <p><strong>Specimen requirement:</strong> 2 ml whole blood in EDTA (purple top) tube.
+                                </p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#felinetestCollapse4" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="felinetestCollapse4">
+                                    <div class="card card-body seeMoreContent">
+                                        <ol type="i">
+                                            <li>Feline immunodeficiency virus (FIV)</li>
+                                            <li>Feline infectious peritonitis (FIP)</li>
+                                            <li>Feline leukemia virus (FeLV)</li>
+                                            <li>Mycoplasma haemofelis</li>
+                                        </ol>
+                                        <p><strong>Specimen requirement:</strong> 2 ml whole blood in EDTA (purple top)
+                                            tube.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="ft_id4" name="felinetest4" id="checkboxId9"
+                            class="felinetest4 testBox">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-dismiss="modal">Done</button>
+                    <!-- <button  onclick="submitTestForm()" type="button" class="btn btn-success " data-dismiss="modal" href="/showCart/1/ [&quot;ct_id1&quot;]">Go To Cart</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        onclick="document.getElementById('cartIcon').click();">Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal for Avian tests -->
+    <div class="modal fade" id="avianBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="avianBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <img alt="Logo" src="{{ url_for('static',filename='image/avibt.png') }}">
+                    <h3 class="modal-title" id="avianBackdropLabel">
+                        <p>Avian Tests Panel</p>
+                        <p style="font-size:16px;color:red">( Please click on the required panel test )</p>
+                    </h3>
+                </div>
+                <div class="modal-body">
+                    <form action="" method="post" class="testForm">
+                        <!-- test 1 -->
+                        <label for="checkboxId10" class="checkboxes" id="checkbox10" onclick="selectCheckBox(10)">
+                            <h6>Infectious Diseases Panel I</h5>
+                                <ol type="i">
+                                    <li>Chlamydia SPP</li>
+                                    <li>Mycobacterium Avium Complex</li>
+                                    <li>Mycobacterium Tuberculosis</li>
+                                    <li>New Castle Disease</li>
+                                    <li>Aspergillosis SPP</li>
+                                    <li>Proventricullar Dialation Disease</li>
+                                    <li>Cryptococcus</li>
+                                </ol>
+                                <p><strong>Specimen requirement:</strong>0.5-1ml whole blood in EDTA (purple top) tube
+                                </p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse1" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse1">
+                                    <div class="card card-body seeMoreContent">
+                                        <ol type="i">
+                                            <li>Chlamydia SPP</li>
+                                            <li>Mycobacterium Avium Complex</li>
+                                            <li>Mycobacterium Tuberculosis</li>
+                                            <li>New Castle Disease</li>
+                                            <li>Aspergillosis SPP</li>
+                                            <li>Proventricullar Dialation Disease</li>
+                                            <li>Cryptococcus</li>
+                                        </ol>
+                                        <p><strong>Specimen requirement:</strong>0.5-1ml whole blood in EDTA (purple
+                                            top) tube
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id1" name="aviantest1" id="checkboxId10"
+                            class="aviantest1 testBox">
+                        <!-- test 2 -->
+                        <label for="checkboxId11" class="checkboxes" id="checkbox11" onclick="selectCheckBox(11)">
+                            <h6>Infectious Diseases Panel II</h5>
+                                <ol type="i">
+                                    <li>Chlamydia SPP</li>
+                                    <li>MycobacteriumAvium Complex</li>
+                                    <li>Aspergillosis</li>
+                                    <li>Mycoplasma</li>
+                                    <li>Paramyxo Virus</li>
+                                    <li>Borna Virus</li>
+                                </ol>
+                                <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top) tube</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse2" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse2">
+                                    <div class="card card-body seeMoreContent">
+                                        <ol type="i">
+                                            <li>Chlamydia SPP</li>
+                                            <li>MycobacteriumAvium Complex</li>
+                                            <li>Aspergillosis</li>
+                                            <li>Mycoplasma</li>
+                                            <li>Paramyxo Virus</li>
+                                            <li>Borna Virus</li>
+                                        </ol>
+                                        <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top)
+                                            tube</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id2" name="aviantest2" id="checkboxId11"
+                            class="aviantest2 testBox">
+                        <!-- test 3 -->
+                        <label for="checkboxId22" class="checkboxes smallCheckBox" id="checkbox22"
+                            onclick="selectCheckBox(22)">
+                            <h6>Histoplasmosis</h5>
+                                <p><strong>Specimen requirement:</strong>0.5 ml whole blood in EDTA (purple top) tube,
+                                    or urine, or sputum, or
+                                    bronchoalveolar lavage, or feces or fecal swab, or 0.2 ml fresh frozen or foed
+                                    issue, or environmental surface swab.
+                                </p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse3" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse3">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong>0.5 ml whole blood in EDTA (purple top)
+                                            tube, or urine, or sputum, or
+                                            bronchoalveolar lavage, or feces or fecal swab, or 0.2 ml fresh frozen or
+                                            foed
+                                            issue, or environmental surface swab.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id3" name="aviantest13" id="checkboxId22"
+                            class="aviantest13 testBox">
+                        <!-- test 4 -->
+                        <label for="checkboxId13" class="checkboxes smallCheckBox" id="checkbox13"
+                            onclick="selectCheckBox(13)">
+                            <h6>Aspergillus flavus</h5>
+                                <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top) tube.
+                                </p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse4" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse4">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top)
+                                            tube.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id4" name="aviantest4" id="checkboxId13"
+                            class="aviantest4 testBox">
+                        <!-- test 5 -->
+                        <label for="checkboxId14" class="checkboxes smallCheckBox" id="checkbox14"
+                            onclick="selectCheckBox(14)">
+                            <h6>Aspergillus fumigatus</h5>
+                                <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top) tube.
+                                </p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse5" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse5">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top)
+                                            tube.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id5" name="aviantest5" id="checkboxId14"
+                            class="aviantest5 testBox">
+                        <!-- test 6 -->
+                        <label for="checkboxId15" class="checkboxes smallCheckBox" id="checkbox15"
+                            onclick="selectCheckBox(15)">
+                            <h6>Salmonella gallinarum</h5>
+                                <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top) tube.
+                                </p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse6" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse6">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top)
+                                            tube.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id6" name="aviantest6" id="checkboxId15"
+                            class="aviantest6 testBox">
+                        <!-- test 7 -->
+                        <label for="checkboxId16" class="checkboxes smallCheckBox" id="checkbox16"
+                            onclick="selectCheckBox(16)">
+                            <h6>Salmonella paragallinarum</h5>
+                                <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top) tube.
+                                </p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse7" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse7">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top)
+                                            tube.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id7" name="aviantest6" id="checkboxId16"
+                            class="aviantest7 testBox">
+                        <!-- test 8 -->
+                        <label for="checkboxId17" class="checkboxes smallCheckBox" id="checkbox17"
+                            onclick="selectCheckBox(17)">
+                            <h6>Mycobacterium tuberculosis</h5>
+                                <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top) tube.
+                                </p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse8" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse8">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top)
+                                            tube.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id8" name="aviantest8" id="checkboxId17"
+                            class="aviantest8 testBox">
+                        <!-- test 9 -->
+                        <label for="checkboxId18" class="checkboxes smallCheckBox" id="checkbox18"
+                            onclick="selectCheckBox(18)">
+                            <h6>Mycobacterium avium</h5>
+                                <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top) tube.
+                                </p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse9" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse9">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top)
+                                            tube.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id9" name="aviantest9" id="checkboxId18"
+                            class="aviantest9 testBox">
+                        <!-- test 10 -->
+                        <label for="checkboxId19" class="checkboxes smallCheckBox" id="checkbox19"
+                            onclick="selectCheckBox(19)">
+                            <h6>Chlamydia psitacci</h5>
+                                <p><strong>Specimen requirement:</strong>Cloacal swab, or 0.2 mi feces, or 0.5 ml whole
+                                    blood in EDTA (purple top) tube.</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse10" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse10">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong>Cloacal swab, or 0.2 mi feces, or 0.5
+                                            ml whole blood in EDTA (purple top) tube.</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id10" name="aviantest10" id="checkboxId19"
+                            class="aviantest10 testBox">
+                        <!-- test 11 -->
+                        <label for="checkboxId20" class="checkboxes smallCheckBox" id="checkbox20"
+                            onclick="selectCheckBox(20)">
+                            <h6>Cryptococcosis</h5>
+                                <p><strong>Specimen requirement:</strong>Cloacal swab, or 0.2 mi feces, or 0.5 ml whole
+                                    blood in EDTA (purple top) tube or 0.2 ml CSF, or 0.2 ml fresh, frozen or fixed
+                                    tissue</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse11" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse11">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong>Cloacal swab, or 0.2 mi feces, or 0.5
+                                            ml whole blood in EDTA (purple top) tube or 0.2 ml CSF, or 0.2 ml fresh,
+                                            frozen or
+                                            fixed tissue</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id11" name="aviantest11" id="checkboxId20"
+                            class="aviantest11 testBox">
+                        <!-- test 12 -->
+                        <label for="checkboxId21" class="checkboxes smallCheckBox" id="checkbox21"
+                            onclick="selectCheckBox(21)">
+                            <h6>Coccidiosis</h5>
+                                <p><strong>Specimen requirement:</strong> 0.5ml whole blood in EDTA (purple top) tube.
+                                </p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse12" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse12">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong> 0.5ml whole blood in EDTA (purple top)
+                                            tube.</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id12" name="aviantest12" id="checkboxId21"
+                            class="aviantest12 testBox">
+                        <!-- test 13 -->
+                        <label for="checkboxId12" class="checkboxes smallCheckBox" id="checkbox12"
+                            onclick="selectCheckBox(12)">
+                            <h6>Aspergillus niger</h5>
+                                <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top) tube.
+                                </p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse13" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse13">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong> 0.5ml whole blood in EDTA (purple top)
+                                            tube.</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id13" name="aviantest3" id="checkboxId12"
+                            class="aviantest3 testBox">
+                        <!-- test 14 -->
+                        <label for="checkboxId23" class="checkboxes smallCheckBox" id="checkbox23"
+                            onclick="selectCheckBox(23)">
+                            <h6>PBFD</h5>
+                                <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top) tube</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse14" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse14">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong> 0.5ml whole blood in EDTA (purple top)
+                                            tube.</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id14" name="aviantest14" id="checkboxId23"
+                            class="aviantest14 testBox">
+                        <!-- test 15 -->
+                        <label for="checkboxId24" class="checkboxes smallCheckBox" id="checkbox24"
+                            onclick="selectCheckBox(24)">
+                            <h6>INDV</h5>
+                                <p><strong>Specimen requirement:</strong>0.5ml whole blood in EDTA (purple top) tube</p>
+                                <!-- 
+
+
+
+                                -->
+                                <button class="btn btn-outline-primary btn-sm viewMoreButton" type="button"
+                                    data-toggle="collapse" data-target="#aviantestCollapse15" aria-expanded="false"
+                                    aria-controls="collapseExample">
+                                    INFO
+                                </button>
+                                <div class="collapse" id="aviantestCollapse15">
+                                    <div class="card card-body seeMoreContent">
+                                        <p><strong>Specimen requirement:</strong> 0.5ml whole blood in EDTA (purple top)
+                                            tube.</p>
+                                    </div>
+                                </div>
+                                <!-- 
+
+
+
+                                -->
+                        </label>
+                        <input type="checkbox" value="at_id15" name="aviantest15" id="checkboxId24"
+                            class="aviantest15 testBox">
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success btn-success" data-dismiss="modal">Done</button>
+                    <!-- <button  onclick="submitTestForm()" type="button" class="btn btn-success " data-dismiss="modal" href="/showCart/1/ [&quot;ct_id1&quot;]">Go To Cart</button> -->
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"
+                        onclick="document.getElementById('cartIcon').click();">Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!-- cart modal -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  -->
+    <!--  style="display:none;" -->
+    <div class="modal fade" id="cartModal" data-backdrop="static" data-keyboard="false" tabindex="-1"
+        aria-labelledby="cartModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header cartHeader">
+                    <button class="btn btn-primary" data-dismiss="modal" onclick="closeCart()">BACK</button>
+                    <h3 class="modal-title" id="cartModalLabel"></h3>
+                </div>
+                <div class="modal-body cartBody">
+                    <div class="cartItems" id="cartItems">
+                        <!-- <div class="cartItem" id="item1">
+                            <div class="upperDetails">
+                                <p id="testInfo"><span>Test : </span>xyz</p>
+                                <p id="categoryInfo"><span>Category : </span>Avian</p>
+                            </div>
+                            <div class="lowerDetails">
+                                <p id="reqInfo"><span>Requirements : </span>ftecehv</p>
+                                <p id="costInfo"><span>Price : </span>5555</p>
+                            </div>
+                        </div> -->
+                    </div>
+                    <div class="userDetails">
+                        <form action="/hello" method="POST" class="row g-3 addressForm" name="addressForm"
+                            id="addressForm">
+                            <div class="col-md-12">
+                                <label for="inputName4" class="form-label">Name<span
+                                        style="color:red;font-size: 12px;"><sup> *</sup></span></label>
+                                <input name="name" type="text" class="form-control" id="inputName4" required>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="inputEmail4" class="form-label">Email<span
+                                        style="color:red;font-size: 12px;"><sup> *</sup></span></label>
+                                <input name="email" type="email" class="form-control" id="inputEmail4" required>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="inputPhno4" class="form-label">Phone No (without +91)<span
+                                        style="color:red;font-size: 12px;"><sup> *</sup></span></label>
+                                <input name="phno" type="number" class="form-control" id="inputPhno4" required>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="inputPetName4" class="form-label">Amount<span
+                                        style="color:red;font-size: 12px;"><sup> *</sup></span></label>
+                                <input name="amount" type="number" class="form-control" id="inputAmount4" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress" class="form-label">Your Address<span
+                                        style="color:red;font-size: 12px;"><sup> *</sup></span></label>
+                                <input name="ad1" type="text" class="form-control" id="inputAddress"
+                                    placeholder="1234 Main St" required>
+                            </div>
+                            <div class="col-12">
+                                <label for="inputAddress2" class="form-label">Your Address 2</label>
+                                <input name="ad2" type="text" class="form-control" id="inputAddress2"
+                                    placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputCity" class="form-label">City<span
+                                        style="color:red;font-size: 12px;"><sup> *</sup></span></label>
+                                <input name="ad3" type="text" class="form-control" id="inputCity" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputState" class="form-label">State<span
+                                        style="color:red;font-size: 12px;"><sup> *</sup></span></label>
+                                <select name="ad4" id="inputState" class="form-select" name="inputState" required>
+                                    <option value="Andhra Pradesh">Andhra Pradesh</option>
+                                    <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
+                                    <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                                    <option value="Assam">Assam</option>
+                                    <option value="Bihar">Bihar</option>
+                                    <option value="Chandigarh">Chandigarh</option>
+                                    <option value="Chhattisgarh">Chhattisgarh</option>
+                                    <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
+                                    <option value="Daman and Diu">Daman and Diu</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Lakshadweep">Lakshadweep</option>
+                                    <option value="Puducherry">Puducherry</option>
+                                    <option value="Goa">Goa</option>
+                                    <option value="Gujarat">Gujarat</option>
+                                    <option value="Haryana">Haryana</option>
+                                    <option value="Himachal Pradesh">Himachal Pradesh</option>
+                                    <option value="Jammu and Kashmir">Jammu and Kashmir</option>
+                                    <option value="Jharkhand">Jharkhand</option>
+                                    <option value="Karnataka" selected>Karnataka</option>
+                                    <option value="Kerala">Kerala</option>
+                                    <option value="Madhya Pradesh">Madhya Pradesh</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Manipur">Manipur</option>
+                                    <option value="Meghalaya">Meghalaya</option>
+                                    <option value="Mizoram">Mizoram</option>
+                                    <option value="Nagaland">Nagaland</option>
+                                    <option value="Odisha">Odisha</option>
+                                    <option value="Punjab">Punjab</option>
+                                    <option value="Rajasthan">Rajasthan</option>
+                                    <option value="Sikkim">Sikkim</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="Telangana">Telangana</option>
+                                    <option value="Tripura">Tripura</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                    <option value="Uttarakhand">Uttarakhand</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="inputZip" class="form-label">Pin code/Zip<span
+                                        style="color:red;font-size: 12px;"><sup> *</sup></span></label>
+                                <input name="ad5" type="number" class="form-control" id="inputZip" required>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                                    <label class="form-check-label" for="gridCheck">
+                                        I accept the <span><a href="tnc">Terms and Conditions</a></span><span
+                                            style="color:red;font-size: 12px;"><sup> *</sup></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="modal-footer cartFooter">
+                    <!--  <form method="post" class="addressForm" id="addressForm" name="addressForm"> -->
+                        <div class="d-flex justify-content-between align-content-center" style="width: 100%;">
+                        <p style="width: 55%;">Please contact on <span><a href="tel:9148514257">+91 9148514257</a></span> for
+                            amount
+                            details.</p>
+                        <button style="width:45%;" class="btn btn-success" onclick="checkValid()">PAYMENT</button>
+                        </div>
+                    <!-- </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- alert -->
+    <div class="alert alert-danger alert-dismissible fade show d-none justify-content-between align-items-center"
+        role="alert" id="emptyCartAlert" style="position:
+        fixed;top:10px;left:50%;transform:translateX(-50%);z-index:1002;width: 95%;box-shadow: rgba(50, 50, 93, 0.25)
+        0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
+        <div class="d-flex">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
+                class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16" role="img"
+                aria-label="Warning:">
+                <path
+                    d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+            </svg>
+            <div>
+                &ensp;The Cart is Empty, Please select the required Tests.
+            </div>
+        </div>
+        <button type="button" class="btn-close font-weight-bolder" id="closeAlertBtn"
+            style="margin: 0 -65px 0 50px;padding:0;border: none;font-size:25px;color:rgb(132, 0, 0); background-color:transparent;"
+            data-bs-dismiss="alert" aria-label="Close">X</button>
+    </div>
+    {% endblock test %}
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+    </script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
+    </script> -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script> -->
+    <script type="text/javascript" src="{{ url_for('static',filename='script/test.js') }}"></script>
+    <script>
+        let myModal = bootstrap.Modal.getOrCreateInstance(document.getElementById('cartModal'));
+        let myToats = bootstrap.Toast.getOrCreateInstance(document.getElementById('emptyCartToast'));
+        // hide cart
+        const closeCart = () => {
+            myModal.hide();
+        }
+        if ("{{ showCart }}" != "1" && "{{ showCart  }}" != "-1") {
+            document.getElementById("emptyCartAlert").classList.remove("d-none");
+            document.getElementById("emptyCartAlert").classList.add("d-flex");
+        }
+        // show cart
+        if ("{{ showCart }}" == "1") {
+            document.getElementById("submitasampleid").click();
+            document.getElementById("closeAlertBtn").click();
+            cartRows = "";
+            // $('#cartModal').modal('show');
+            myModal.show();
+            let cartString = "{{ cartArray }}";
+            cartString = cartString.substring(0, cartString.length - 6);
+            cartRows = cartString.split("|||***");
+            //console.log(cartRows);
+            let count = cartRows.length;
+            let itemsCountSpan = document.createElement("span");
+            itemsCountSpan.innerHTML = "Checkout - Total of " + count + " Test."
+            itemsCountSpan.style.fontSize = "24px";
+            itemsCountSpan.style.color = "rgb(42, 113, 255)";
+            document.getElementById("cartModalLabel").appendChild(itemsCountSpan);
+            let totalCost = 0;
+            for (let i = 0; i < count; i++) {
+                let data = cartRows[i];
+                let cartColums = data.split("***");
+                let id = String(cartColums[0]);
+                let category = String(cartColums[1]);
+                let name = String(cartColums[2]);
+                let req = String(cartColums[3]);
+                let cost = parseInt(cartColums[4]);
+                // outer div
+                let outerDiv = document.createElement("div");
+                outerDiv.className = "cartItem";
+                let outerDivId = "item" + (i + 1);
+                outerDiv.id = outerDivId;
+                document.getElementById("cartItems").appendChild(outerDiv);
+                // upper details
+                let upperDetails = document.createElement("div");
+                upperDetails.className = "upperDetails";
+                let upperDivId = "upperDetails" + (i + 1);
+                upperDetails.id = upperDivId;
+                document.getElementById(outerDivId).appendChild(upperDetails);
+                // lower details
+                let lowerDetails = document.createElement("div");
+                lowerDetails.className = "lowerDetails";
+                let lowerDivId = "lowerDetails" + (i + 1);
+                lowerDetails.id = lowerDivId;
+                document.getElementById(outerDivId).appendChild(lowerDetails);
+                // p1
+                let p1 = document.createElement("p");
+                let p1Id = "testInfo" + (i + 1);
+                p1.id = p1Id;
+                // span1
+                let span1 = document.createElement("span");
+                span1.innerHTML = "Test: ";
+                p1.innerHTML += name;
+                // append
+                document.getElementById(upperDivId).appendChild(p1);
+                document.getElementById(p1Id).appendChild(span1);
+                // p2
+                let p2 = document.createElement("p");
+                let p2Id = "categoryInfo" + (i + 1);
+                p2.id = p2Id;
+                // span2
+                let span2 = document.createElement("span");
+                span2.innerHTML = "Category: ";
+                p2.innerHTML += category;
+                document.getElementById(upperDivId).appendChild(p2);
+                document.getElementById(p2Id).appendChild(span2);
+                // p3
+                let p3 = document.createElement("p");
+                let p3Id = "reqInfo" + (i + 1);
+                p3.id = p3Id;
+                // span3
+                let span3 = document.createElement("span");
+                span3.innerHTML = "Requirements: ";
+                p3.innerHTML += req;
+                // append
+                document.getElementById(lowerDivId).appendChild(p3);
+                document.getElementById(p3Id).appendChild(span3);
+                // p4
+                // 
+                // 
+                // 
+                // 
+                // 
+                // let p4=document.createElement("p");
+                // let p4Id="costInfo"+(i+1);
+                // p4.id=p4Id;
+                // 
+                // 
+                // 
+                // 
+                // span4
+                //let span4=document.createElement("span");
+                //span4.innerHTML="Price: ";
+                //p4.innerHTML+=cost;
+                //document.getElementById(lowerDivId).appendChild(p4);
+                //document.getElementById(p4Id).appendChild(span4);
+                //totalCost+=cost;
+            }
+        }
+    </script>
+</body>
+
+</html>

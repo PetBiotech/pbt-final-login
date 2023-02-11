@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <a href="/" onclick="submitTestForm()">Back</a>
+    <form action="/addTest" method="post" class="addTest" style="display: flex;flex-direction:column;height:80vh;justify-content: space-around;">
+        <input type="text" name="test_id" placeholder="id" value="at_id1">
+        <input type="text" name="category" placeholder="cat" value="Avian">
+        <input type="text" name="name" placeholder="name">
+        <input type="text" name="req" placeholder="req" value="0.5ml whole blood in EDTA (purple top) tube">
+        <input type="submit" value="Submit">
+    </from>
+    <p>{{ message }}</p>
+    <br>
+    <p>ct_id1   Canine</p>
+    <p>ft_id1   Feline</p>
+    <p>at_id1   Avian</p>
+</body>
+</html>

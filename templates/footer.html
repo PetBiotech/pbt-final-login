@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style/footer.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    {% block footer %}
+    <footer>
+        <div class="title">
+            PetBioTech
+        </div>
+        <div class="items">
+            <div class="nav">
+                <ul>
+                    <li><h5>Navigation</h5></li>
+                    <li><a href="#topHeader">Home</a></li>
+                    <li><a href="#testBody">Submit a Sample</a></li>
+                    <li><a href="#ourScienceBody">Our Science</a></li>
+                    <li><a href="#productBody">Services and Product</a></li>
+                    <li><a href="#aboutUsBody">About Us</a></li>
+                    <li><a href="#contactBody">Contact</a></li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h5>Contact</h5>
+                <h6>Phone No</h6>
+                <p>(+91) 91485 14257</p>
+                <br>
+                <h6>Email</h6>
+                <p>ebtlabs@gmail.com</p>
+            </div>
+            <div class="aboutus">
+                <h5>Who are we?</h5>
+                <a href="https://iisc.ac.in/" target="_blank">
+                    <h6>IISC</h6>
+                </a>
+                <br>
+                <a href="privacyPolicy">
+                    <h6>Privacy Policy</h6>
+                </a>
+                <a href="tnc">
+                    <h6>Terms and Conditions</h6>
+                </a>
+                <a href="refundPolicy">
+                    <h6>Refund Policy</h6>
+                </a>
+            </div>
+            <div class="map">
+                <h5>Meet us at location</h5>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.2795597409686!2d77.57483831482314!3d13.081460690783878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae19103e11f12f%3A0x2e982efcb1c594cc!2sDepartment%20of%20Agricultural%20Biotechnology!5e0!3m2!1sen!2sin!4v1666862126708!5m2!1sen!2sin" width="300" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </footer>
+    {% endblock footer %}
+</body>
+
+</html>

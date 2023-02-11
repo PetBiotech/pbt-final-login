@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Online Table</title>
+</head>
+<body>
+
+
+<table class="zui-table">
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>email</th>
+            <th>name</th>
+            <th>amount</th>
+            <th>address</th>
+            <th>phone</th>
+            <th>pay_id</th>
+            <th>order_id</th>
+            <th>status</th>
+            <th>testsId</th>
+
+        </tr>
+    </thead>
+    {% for users in query %}
+    <tr>
+    	<td>{{users.id}}</td>
+    	<td>{{users.email}}</td>
+    	<td>{{users.name}}</td>
+    	<td>{{users.amount}}</td>
+    	<td>{{users.address}}</td>
+    	<td>{{users.phone}}</td>
+    	<td>{{users.pay_id}}</td>
+    	<td>{{users.order_id}}</td>
+    	<td>{{users.status}}</td>
+    	<td>{{users.testsId}}</td>
+    </tr>
+
+    {% endfor %}
+<style>
+    	.zui-table {
+    border: solid 1px #DDEEEE;
+    border-collapse: collapse;
+    border-spacing: 0;
+    font: normal 13px Arial, sans-serif;
+}
+.zui-table thead th {
+    background-color: #DDEFEF;
+    border: solid 1px #DDEEEE;
+    color: #336B6B;
+    padding: 10px;
+    text-align: left;
+    text-shadow: 1px 1px 1px #fff;
+}
+.zui-table tbody td {
+    border: solid 1px #DDEEEE;
+    color: #333;
+    padding: 10px;
+    text-shadow: 1px 1px 1px #fff;
+}
+</style>
+</body>
+</html>
