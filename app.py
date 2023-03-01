@@ -27,7 +27,7 @@ from flask import flash, session
 app = Flask(__name__)
 
 app.config['SECRET_KEY']= 'anandandkaustubh'
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///petBiotech.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://admin:Petbiotech12@pbt-website.czufb7vlwyub.ap-south-1.rds.amazonaws.com:3306/petbiotechDB'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 app.app_context().push()
